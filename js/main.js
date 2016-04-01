@@ -9,7 +9,8 @@ function getUserData(form) {
 		email     : form.userEmail.value,
 		phone     : form.userPhone.value,
 		color     : form.favColor.value,
-		birthplace: form.userBirth.value
+		birthplace: form.userBirth.value,
+		food      : form.userFood.value
 	}
 	// call displayProfile function and pass through userProfile object 
 	displayProfile(userProfile)
@@ -27,6 +28,7 @@ function displayProfile(userProfile) {
 		userPhone      = document.getElementById('userPhone'),
 		userColor      = document.getElementById('userColor'),
 		userBirthplace = document.getElementById('userBirthplace')
+		userFavFood	   = document.getElementById('userFavFood')
 
 	// change the text of the variables from the object
 	userName.innerText = "Welcome " + userProfile.firstname + " " + userProfile.lastname 
@@ -35,6 +37,7 @@ function displayProfile(userProfile) {
 	userPhone.innerText = "Phone: " + userProfile.phone
 	userColor.innerText = "Favorite Color: " + userProfile.color
 	userBirthplace.innerText = "Birth Continent: " + userProfile.birthplace
+	userFavFood.innerText = "Favorite Food: " + userProfile.food
 
 	document.getElementById('newProfile').style.display = "none"
 	document.getElementById('updatedProfile').style.display = "block"
